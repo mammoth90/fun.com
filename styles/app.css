@@ -1,47 +1,38 @@
-@font-face {
-  font-family: Roboto;
-  src: url(".../fonts/Roboto-Regular.ttf") format(truetype);
-  font-weight: normal;
-  font-style: normal;
+:root {
+  --red: #f44336;
+  --green: #4caf50;
+  --blue: #2196f3;
+  --side: 33%;
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  width: 600px;
+  height: 400px;
   margin: 0;
-  background-color: #f4f4f9;
-  font-family: Roboto, sans-serif;
 }
 
 /* BEGIN (write your solution here) */
 div {
-  width: 300px;
-  padding: 20px;
-  background-color: #f4f4f9;
-  border: 1px #ddd solid;
-  text-align: center;
-  border-radius: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--side);
+  aspect-ratio: 1 / 1;
 }
 
-img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin-bottom: 15px;
+.square-red {
+  background-color: var(--red);
 }
 
-h2 {
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 10px;
+.square-green {
+  background-color: var(--green);
+  left: var(--side);
+  top: var(--side);
 }
 
-p {
-  font-size: 16px;
-  color: #666;
-  margin: 0;
+.square-blue {
+  background-color: var(--blue);
+  left: calc(var(--side)*2);
 }
 
 /* END */
